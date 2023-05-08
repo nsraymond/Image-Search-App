@@ -1,0 +1,142 @@
+body{
+    background-color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 60px;
+}
+
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+#search-btn{
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+#search-btn:hover{
+    background-color: #3e8e41;
+}
+
+.search-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+}
+
+.search-result{
+    margin: 10px;
+    width: 350px;
+    height: 300px;
+    margin-bottom: 60px;
+    box-shadow: 0 0 3px rgba(0,0,0, .3);
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.search-result:hover img{
+    transform: scale(1.05);
+}
+
+.search-result img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+
+.search-result a{
+    padding: 10px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color .3s ease-in-out;
+}
+
+.search-result:hover{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.show-more{
+    background-color: #008cba;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-more:hover{
+    filter: brightness(88%);
+}
+
+@media screen and (max-width: 740px) {
+    .search-result{
+        width: 79%;
+    }
+    .search-result img{
+        height: 330px;
+    }
+  }
+
+  @media screen and (max-width: 486px) {
+    h1{
+        font-size: 28px;
+    }
+    .search-result{
+        width: 89%;
+    }
+    .search-result img{
+        height: 300px;
+    }
+    form{
+        flex-direction: column;
+    }
+    #search-input{
+        width: 86%;
+    }
+    #search-btn{
+        margin-top: 10px;
+    }
+  }
